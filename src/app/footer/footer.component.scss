@@ -1,0 +1,107 @@
+$footer-color: #d9d9d9;
+$footer-bg-color:#2a2a2a;
+
+@mixin clear {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin clear-list {
+  @include clear;
+  list-style: none;
+}
+
+
+.footer {
+  background-color: $footer-bg-color;
+  color: $footer-color;
+  padding-bottom: 20px;
+
+&__header {
+   display: flex;
+   justify-content: space-between;
+   padding: 30px 0;
+   border-bottom: 2px solid $footer-color;
+ }
+
+&__brand {
+   font-weight: bold;
+ }
+
+&__nav {
+   display: flex;
+
+& .nav__item {
+  @include clear-list;
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+& .nav__link {
+    text-transform: uppercase;
+    color: $footer-color;
+    transition: .3s all;
+&:hover {
+   color: #fff;
+ }
+}
+}
+
+&__content {
+   display: flex;
+   padding: 20px 0;
+   line-height: 1.7;
+   font-size: 12px;
+ }
+
+&__block {
+   width: (100% / 3);
+   padding: 20px;
+ }
+
+&__text {
+
+ }
+
+&__map {
+   display: flex;
+   padding: 0 30px;
+   border-right: 1px solid $footer-color;
+   border-left: 1px solid $footer-color;
+ }
+
+&__list {
+   width: 50%;
+   font-size: 13px;
+
+& .list__item {
+    padding: 5px;
+&:hover {
+   color: #fff;
+.list__link {
+  color: #fff;
+  margin-left: 10px;
+}
+}
+}
+
+& .list__icon {
+
+  }
+
+& .list__link {
+    margin-left: 5px;
+    color: $footer-color;
+    transition: .3s margin-left;
+  }
+}
+
+&__contact {
+& .contact__icon {
+    margin-right: 7px;
+  }
+& .contact__item {
+    margin-bottom: 5px;
+  }
+}
+}
